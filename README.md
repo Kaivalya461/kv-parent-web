@@ -6,5 +6,5 @@ Description:
 3. SpringSecurity includes STATELESS JWT authentication for all incoming HTTP requests.
 
 Library Dependencies
-1. com.kv.security-service (Yet to push to Github)
+1. com.kv.security-service (Yet to push to GitHub)
 
