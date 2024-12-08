@@ -4,7 +4,7 @@
 
     <groupId>com.kv</groupId>
     <artifactId>kv-parent-web</artifactId>
-    <version>4.0.0</version>
+    <version>5.0.0</version>
     <packaging>pom</packaging>
 
     <name>kv-parent-web</name>
@@ -13,8 +13,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <spring-boot.version>3.1.4</spring-boot.version>
-        <spring-cloud.version>2022.0.0</spring-cloud.version>
+        <spring-boot.version>3.4.0</spring-boot.version>
+        <spring-cloud.version>2024.0.0</spring-cloud.version>
         <lombok.version>1.18.32</lombok.version>
         <slf4j-api.version>2.0.9</slf4j-api.version>
     </properties>
@@ -22,6 +22,14 @@
 <!--    Dependency Management -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -36,6 +44,13 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+
+            <!--    Contains all JWT libraries for stateless JWT authorization using Spring Web-Filter interception. -->
+            <dependency>
+                <groupId>com.kv</groupId>
+                <artifactId>security-service-utils</artifactId>
+                <version>5.0.1</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -47,12 +62,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
             <version>${spring-boot.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.kv</groupId>
-            <artifactId>security-service</artifactId>
-            <version>0.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
