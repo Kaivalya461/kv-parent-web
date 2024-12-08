@@ -46,9 +46,10 @@
             </dependency>
 
             <!--    Contains all JWT libraries for stateless JWT authorization using Spring Web-Filter interception. -->
+            <!--    Source Code - https://github.com/Kaivalya461/jwt-web-filter-lib.git -->
             <dependency>
                 <groupId>com.kv</groupId>
-                <artifactId>security-service-utils</artifactId>
+                <artifactId>jwt-web-filter-lib</artifactId>
                 <version>5.0.1</version>
             </dependency>
         </dependencies>
